@@ -515,16 +515,16 @@
      padding-right: 30px;
 }
  nav.navbar.bootsnav ul.nav li.active > a{
-     color: #b0b435;
+     color: #2a148b;
 }
  nav.navbar.bootsnav ul.nav li.active > a:hover{
-     color: #b0b435;
+     color: #2a148b;
 }
  nav.navbar.bootsnav ul.nav li > a:hover{
-     color: #b0b435;
+     color: #2a148b;
 }
  nav.navbar.bootsnav ul.nav li.megamenu-fw > a:hover{
-     color: #b0b435;
+     color: #2a148b;
 }
  @media (min-width: 1024px) {
      nav.navbar.navbar-inverse ul.nav .dropdown-menu{
@@ -742,7 +742,7 @@
      height: 100vh;
 }
  .slides-navigation a {
-     background: #b0b435;
+     background: #99101c;
      position: absolute;
      height: 70px;
      width: 70px;
@@ -798,8 +798,8 @@
 	 border-radius: 6px;
 }
  .slides-pagination a.current{
-     background: #b0b435;
-     border: 2px solid #b0b435;
+     background:#c71a28;
+     border: 2px solid #c71a28;
 }
  .cover-slides p a{
      font-size: 24px;
