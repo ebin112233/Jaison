@@ -49,22 +49,7 @@
             opacity: 1;
         }
     </style>
-    <script>
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
-    </script>
+
 
     <!-- Start Main Top -->
     <header class="main-header">
@@ -191,7 +176,7 @@
             <div class="row">
 
                 <div class="col-lg-4 col-md-6 my-lg-0 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="spice">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-cyan">
@@ -205,10 +190,10 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-0 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="tea">
                         <div class="d-flex align-items-center">
-                            <div
-                                class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-orange">
+                            <div class=" rounded-circle mx-3 d-flex align-items-center justify-content-center
+                            pale-orange">
                                 <img src="images/products/tea_icon.png" alt="">
                             </div>
                             <div class="d-flex flex-column">
@@ -219,7 +204,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-0 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="coffee">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-purple">
@@ -232,7 +217,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-3 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="oil">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-cyan">
@@ -246,7 +231,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-3 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="cereals">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-pink">
@@ -260,7 +245,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-3 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="nuts">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-orange">
@@ -274,7 +259,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-0 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="fish">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-orange">
@@ -288,7 +273,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-0 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="garments">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-green">
@@ -302,7 +287,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-0 my-3">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="spare_parts">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-pista">
@@ -315,7 +300,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-lg-3 my-3" style="margin-top:10px;">
-                    <div class="boxs bg-white">
+                    <div class="boxs bg-white spice_names" data-name="medical">
                         <div class="d-flex align-items-center">
                             <div
                                 class="rounded-circle mx-3  d-flex align-items-center justify-content-center pale-pista">
@@ -439,6 +424,32 @@
 
     <a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
 
+    <!-- MODAL-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-body py-0">
+                    <div class="d-flex main-content">
+                        <div class="bg-image promo-img mr-3"
+                            style="background-image: url('images/about-img.jpg');height: 500px;">
+                        </div>
+                        <div class="content-text p-4 px-5 align-item-stretch">
+                            <div class="text-center">
+
+                                <h3 class="mb-3 line"></h3>
+                                <p class="mb-5 description-val"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
     <!-- ALL JS FILES -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -456,5 +467,89 @@
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
 </body>
+<script>
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+    window.addEventListener("scroll", reveal);
+    $(function () {
+        $(".spice_names").click(function () {
+            const data = {
+                "spice": {
+                    "name": "Spices",
+                    "description": "Text",
+                    "image_url": "images/about-img.jpg"
+                },
+                "tea": {
+                    "name": "Tea",
+                    "description": "Text",
+                    "image_url": "images/products/Tea.jpg"
+                },
+                "coffee": {
+                    "name": "Coffee",
+                    "description": "Text",
+                    "image_url": "images/products/coffee.jpg"
+                },
+                "oil": {
+                    "name": "Edible Oil",
+                    "description": "Text",
+                    "image_url": "images/products/cooking_oil.jpg"
+                },
+                "cereals": {
+                    "name": "Cereals",
+                    "description": "Text",
+                    "image_url": "images/products/cereals.jpg"
+                },
+                "nuts": {
+                    "name": "Nuts",
+                    "description": "Text",
+                    "image_url": "images/products/nuts.jpg"
+                },
+                "garments": {
+                    "name": "Garments",
+                    "description": "Text",
+                    "image_url": "images/products/garments.jpg"
+                },
+                "fish": {
+                    "name": "Dried Sea Food Products",
+                    "description": "Text",
+                    "image_url": "images/products/dry_fish.jpg"
+                },
+                "spare_parts": {
+                    "name": "Automobile Spare Parts",
+                    "description": "Text",
+                    "image_url": "images/products/spare_parts.jpg"
+                },
+                "medical": {
+                    "name": "Medical Equipment",
+                    "description": "Text",
+                    "image_url": "images/products/medical_equipment.jpg"
+                }
+            }
+            let value = $(this).attr("data-name");
+
+            // let value = data.;
+            // console.log(data.${`value`});
+            // alert($(this).attr("data-name"));
+
+            $('.description-val').html(data[value].description);
+            $('.line').html(data[value].name);
+            $('.bg-image').css({ 'background-image': 'url(' + data[value].image_url + ')' });
+            $("#exampleModalCenter").modal('show');
+        });
+
+    });
+</script>
 
 </html>
