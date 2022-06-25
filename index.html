@@ -36,7 +36,35 @@
 </head>
 
 <body>
+    <style>
+        .reveal {
+            position: relative;
+            transform: translateY(150px);
+            opacity: 0;
+            transition: 2s all ease;
+        }
 
+        .reveal.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+    </script>
 
     <!-- Start Main Top -->
     <header class="main-header">
@@ -151,7 +179,7 @@
     <!-- End Slider -->
 
     <!-- Our Products  -->
-    <div class="categories-shop" id="one">
+    <div class="categories-shop reveal" id="one">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -240,7 +268,7 @@
     <!-- End Categories -->
 
     <!--Export with Us-->
-    <div class="categories-shop" id="one">
+    <div class="categories-shop reveal" id="one">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
